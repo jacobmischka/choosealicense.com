@@ -1,9 +1,12 @@
 {
   "name": "@jacobmischka/choosealicense.com",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A site to provide non-judgmental guidance on choosing a license for your open source project, added to NPM",
-  "main": "index.js",
+  "main": "index.json",
   "repository": "https://github.com/jacobmischka/choosealicense.com.git",
   "author": "Jacob Mischka <jacob@mischka.me>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "front-matter": "^2.1.2"
+  }
 }
