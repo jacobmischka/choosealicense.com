@@ -10,7 +10,9 @@ files.map(filename => {
 	const file = fs.readFileSync(path.join(__dirname, '..', '_licenses', filename), {
 		encoding: 'utf8'
 	});
-	licenses.push(frontMatter(file));
+	const license = frontMatter(file);
+	license.body = license.body.trim() + '\n';
+	licenses.push(license);
 });
 
 fs.writeFileSync(path.join(__dirname, '..', 'licenses.json'), JSON.stringify(licenses, null, 4));
